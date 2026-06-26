@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS202 Java Exam Review</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow">CS202 Java</p>
+          <h1>Pokemon + FoodMenu Exam Review</h1>
+          <p class="subtitle">One practice site for inheritance, abstract classes, Swing, constructors, and events.</p>
+        </div>
+        <div class="badge-row" aria-label="Review topics">
+          <span>Pokemon</span>
+          <span>FoodMenu</span>
+          <span>Swing</span>
+        </div>
+      </header>
+
+      <nav class="tab-bar" aria-label="Review sections">
+        <button class="tab-button is-active" type="button" data-tab="home">Map</button>
+        <button class="tab-button" type="button" data-tab="pokemon">Pokemon</button>
+        <button class="tab-button" type="button" data-tab="food">FoodMenu</button>
+        <button class="tab-button" type="button" data-tab="mixed">Mixed Practice</button>
+        <button class="tab-button" type="button" data-tab="cram">Cram</button>
+      </nav>
+
+      <section id="home" class="tab-panel is-active">
+        <div class="section-heading">
+          <h2>Same Java Ideas, Two Projects</h2>
+          <p>Study the pattern once, then recognize it in both Pokemon and FoodMenu.</p>
+        </div>
+
+        <div class="compare-grid">
+          <article class="concept-card">
+            <h3>Parent Class</h3>
+            <p><code>Pokemon</code> and <code>Food</code> are abstract parent classes. They store shared data and shared methods.</p>
+          </article>
+          <article class="concept-card">
+            <h3>Child Classes</h3>
+            <p><code>Charmander extends Pokemon</code>. <code>Adobo extends Food</code>. Child classes customize the parent.</p>
+          </article>
+          <article class="concept-card">
+            <h3>Constructors</h3>
+            <p>Child constructors use <code>super(...)</code> to pass setup values to the parent constructor.</p>
+          </article>
+          <article class="concept-card">
+            <h3>Polymorphism</h3>
+            <p><code>List&lt;Pokemon&gt;</code> stores many Pokemon types. <code>List&lt;Food&gt;</code> stores many food types.</p>
+          </article>
+          <article class="concept-card">
+            <h3>Swing Drawing</h3>
+            <p>Both apps use <code>JPanel</code>, <code>paintComponent</code>, <code>Graphics</code>, and <code>repaint()</code>.</p>
+          </article>
+          <article class="concept-card">
+            <h3>Mouse Events</h3>
+            <p>Pokemon uses click and drag. FoodMenu uses click selection. Both read mouse x/y values.</p>
+          </article>
+        </div>
+
+        <div class="flow-strip">
+          <div><strong>abstract parent</strong><span>shared fields and methods</span></div>
+          <div><strong>child extends parent</strong><span>specific object type</span></div>
+          <div><strong>super(...)</strong><span>calls parent constructor</span></div>
+          <div><strong>list of parent type</strong><span>polymorphism</span></div>
+          <div><strong>Swing panel</strong><span>draw and handle events</span></div>
+        </div>
+      </section>
+
+      <section id="pokemon" class="tab-panel">
+        <div class="section-heading">
+          <h2>Pokemon Review</h2>
+          <p>Practice <code>Pokemon</code>, child classes, drawing, clicking, dragging, and <code>this(...)</code>.</p>
+        </div>
+        <div class="two-column">
+          <div>
+            <h3 class="column-heading">Guided Build</h3>
+            <div class="exercise-list" id="pokemonGuided"></div>
+          </div>
+          <div>
+            <h3 class="column-heading">No Hints</h3>
+            <div class="exercise-list" id="pokemonPractice"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="food" class="tab-panel">
+        <div class="section-heading">
+          <h2>FoodMenu Review</h2>
+          <p>Practice <code>package</code>, <code>Food</code>, child menu items, drawing cards, and mouse selection.</p>
+        </div>
+        <div class="two-column">
+          <div>
+            <h3 class="column-heading">Guided Build</h3>
+            <div class="exercise-list" id="foodGuided"></div>
+          </div>
+          <div>
+            <h3 class="column-heading">No Hints</h3>
+            <div class="exercise-list" id="foodPractice"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mixed" class="tab-panel">
+        <div class="section-heading">
+          <h2>Mixed Practice</h2>
+          <p>Use this after reviewing both projects. These questions force you to compare syntax patterns.</p>
+        </div>
+        <div class="exercise-list" id="mixedPractice"></div>
+      </section>
+
+      <section id="cram" class="tab-panel">
+        <div class="section-heading">
+          <h2>Last-Minute Cram Sheet</h2>
+          <p>Be ready to explain these in simple words.</p>
+        </div>
+
+        <div class="cram-grid">
+          <article class="concept-card">
+            <h3><code>abstract</code></h3>
+            <p>A parent class or method that is incomplete by design. Child classes finish the missing parts.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>extends</code></h3>
+            <p>Creates inheritance. The child class receives fields and methods from the parent class.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>super(...)</code></h3>
+            <p>Calls the parent constructor. It must be first inside a child constructor.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>this(...)</code></h3>
+            <p>Calls another constructor in the same class. Used in <code>Pichu</code> and <code>Bulbasaur</code>.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>@Override</code></h3>
+            <p>Compiler check that a child method correctly replaces a parent method.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>List&lt;Parent&gt;</code></h3>
+            <p>Polymorphism. A parent-type list can hold many different child objects.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>paintComponent</code></h3>
+            <p>Swing calls this when the panel needs to redraw. Always call <code>super.paintComponent(g)</code>.</p>
+          </article>
+          <article class="concept-card">
+            <h3><code>MouseListener</code></h3>
+            <p>An interface that requires mouse methods like <code>mouseClicked</code> or <code>mousePressed</code>.</p>
+          </article>
+        </div>
+
+        <div class="prompt-box">
+          <h3>Copy This When Asking Codex Or ChatGPT To Check Your Practice</h3>
+          <textarea readonly id="reviewPrompt">Please check my CS202 Java exam practice code. Focus on package syntax, abstract classes, inheritance, constructors, super/this, @Override, polymorphism with lists, Swing paintComponent, mouse listeners, and whether the code compiles. Explain mistakes simply.</textarea>
+          <button type="button" id="copyPrompt">Copy Review Prompt</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
